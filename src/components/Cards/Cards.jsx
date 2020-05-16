@@ -7,7 +7,7 @@ const Cards = ( {data: {confirmed, recovered, deaths, lastUpdate} } ) => {
     if(!confirmed){
         return 'Loading...';
     }
-    
+
     return(
         <div className={styles.container}>
             <Grid container spacing={3} justify="center">
@@ -15,7 +15,7 @@ const Cards = ( {data: {confirmed, recovered, deaths, lastUpdate} } ) => {
                     <CardContent>
                         <Typography color="textSecondary" guttorBottom>Infected</Typography>
                         <Typography variant="h5">{confirmed.value}</Typography> 
-                        <Typography color="textSecondary"> REAL DATE</Typography>
+                        <Typography color="textSecondary">Last Update</Typography>
                         <Typography color="body2">Number of Active Cases</Typography> 
                     </CardContent>
                 </Grid>
@@ -23,7 +23,7 @@ const Cards = ( {data: {confirmed, recovered, deaths, lastUpdate} } ) => {
                 <Grid item component={Card}>
                     <CardContent>
                         <Typography color="textSecondary" guttorBottom>Recovered</Typography>
-                        <Typography variant="h5">REAK DATA</Typography> 
+                        <Typography variant="h5">{recovered.value}</Typography> 
                         <Typography color="textSecondary"> REAL DATE</Typography>
                         <Typography color="body2">Number of Recoveries</Typography> 
                     </CardContent>
@@ -32,7 +32,7 @@ const Cards = ( {data: {confirmed, recovered, deaths, lastUpdate} } ) => {
                 <Grid item component={Card}>
                     <CardContent>
                         <Typography color="textSecondary" guttorBottom>Deaths</Typography>
-                        <Typography variant="h5">REAK DATA</Typography> 
+                        <Typography variant="h5">{deaths.value}</Typography> 
                         <Typography color="textSecondary"> REAL DATE</Typography>
                         <Typography color="body2">Number of Deaths</Typography> 
                     </CardContent>
